@@ -1,0 +1,124 @@
+/* Reset default */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  color: #00ff00;
+  font-family: 'Courier New', Courier, monospace;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Container */
+.terminal-container {
+  width: 100%;
+  max-width: 900px;
+  height: 95vh;
+  border: 2px solid #00ff00;
+  padding: 15px;
+  overflow-y: auto;
+  background-color: #000;
+  border-radius: 5px;
+  box-shadow: 0 0 20px #00ff00;
+}
+
+/* Terminal section */
+#terminal {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Terminal Header */
+.header {
+  font-weight: bold;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #00ff00;
+  margin-bottom: 10px;
+  text-shadow: 0 0 5px #00ff00;
+}
+
+/* Output area */
+#output {
+  flex: 1;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  padding-right: 5px;
+  margin-bottom: 10px;
+}
+
+/* Input section */
+#input-form {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.prompt {
+  font-weight: bold;
+  color: #00ff00;
+  text-shadow: 0 0 5px #00ff00;
+}
+
+#command {
+  flex: 1;
+  background-color: #000;
+  border: none;
+  border-bottom: 2px solid #00ff00;
+  color: #00ff00;
+  padding: 5px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1rem;
+  outline: none;
+  caret-color: #00ff00;
+}
+
+#command::placeholder {
+  color: #00ff00a0;
+}
+
+/* Scrollbars */
+#output::-webkit-scrollbar {
+  width: 6px;
+}
+
+#output::-webkit-scrollbar-thumb {
+  background-color: #00ff00;
+}
+
+/* Glow animation for output lines */
+.glow {
+  animation: glow-text 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow-text {
+  from {
+    text-shadow: 0 0 5px #00ff00;
+  }
+  to {
+    text-shadow: 0 0 20px #00ff00;
+  }
+}
+
+/* Responsive for mobile */
+@media (max-width: 600px) {
+  .terminal-container {
+    padding: 10px;
+    height: 90vh;
+  }
+
+  #command {
+    font-size: 0.9rem;
+  }
+
+  .header {
+    font-size: 0.95rem;
+  }
+}
