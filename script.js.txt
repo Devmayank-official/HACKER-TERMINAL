@@ -1,0 +1,109 @@
+const input = document.getElementById("terminal-input");
+const output = document.getElementById("terminal-output");
+
+function writeOutput(text) {
+  output.innerHTML += `${text}\n`;
+  output.scrollTop = output.scrollHeight;
+}
+
+function delayCountdown(seconds, callback) {
+  let counter = seconds;
+  const interval = setInterval(() => {
+    writeOutput(`⏳ Estimated time: ${counter}s...`);
+    counter--;
+    if (counter < 0) {
+      clearInterval(interval);
+      callback();
+    }
+  }, 1000);
+}
+
+function generateRandomPassword() {
+  const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*";
+  let password = "";
+  for (let i = 0; i < 12 + Math.floor(Math.random() * 4); i++) {
+    password += chars[Math.floor(Math.random() * chars.length)];
+  }
+  return password;
+}
+
+input.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    const command = input.value.trim();
+    writeOutput(`> ${command}`);
+    input.value = "";
+
+    if (command === "/help") {
+      writeOutput("Available commands:\n/help\n/clear\n/scan_devices\n/scan_network\n/trace -block --ip=xxx.xx.xxx\n/scan_website\n/launch -ddos --target=URL\n/crack -hash file --file=passwords.db\n/attack_device\n/bypass_firewall");
+    } 
+    else if (command === "/clear") {
+      output.innerHTML = "";
+    }
+    else if (command === "/scan_devices") {
+      delayCountdown(4, () => {
+        const devices = ["Phone_A12", "Laptop_Root", "SmartTV_334", "Tablet_Zone"];
+        writeOutput("📱 Devices found:\n" + devices.slice(0, Math.floor(2 + Math.random() * 3)).join("\n"));
+      });
+    }
+    else if (command === "/scan_network") {
+      delayCountdown(5, () => {
+        const networks = [
+          { name: "FrozenNet", ip: "192.168.1.11", security: "WPA3" },
+          { name: "ShadowWifi", ip: "192.168.0.22", security: "WPA2" },
+          { name: "HackSpot", ip: "10.0.0.4", security: "WPA2.5" },
+          { name: "AnonymousLAN", ip: "172.16.5.66", security: "WPA3" }
+        ];
+        const picked = networks.sort(() => 0.5 - Math.random()).slice(0, 3);
+        picked.forEach(net => {
+          writeOutput(`📶 Name: ${net.name}\n📡 IP: ${net.ip}\n🔒 Security: ${net.security}\n`);
+        });
+      });
+    }
+    else if (command.startsWith("/trace -block --ip=")) {
+      delayCountdown(4, () => {
+        writeOutput("🚫 Network traced and blocked successfully.");
+      });
+    }
+    else if (command === "/scan_website") {
+      delayCountdown(4, () => {
+        const sites = ["https://darkweb.org", "https://rootaccess.net", "https://cyberportal.com", "https://undernet.io"];
+        writeOutput("🌍 Websites found:\n" + sites.slice(0, 5).join("\n"));
+      });
+    }
+    else if (command.startsWith("/launch -ddos")) {
+      delayCountdown(7, () => {
+        writeOutput("💥 DDoS attack sent successfully.");
+      });
+    }
+    else if (command.startsWith("/crack -hash")) {
+      const time = 5 + Math.floor(Math.random() * 10);
+      delayCountdown(time, () => {
+        const failChance = Math.random();
+        if (failChance < 0.2) {
+          writeOutput("❌ Failed to crack the password.");
+        } else {
+          writeOutput(`🔓 Password cracked successfully: ${generateRandomPassword()}`);
+        }
+      });
+    }
+    else if (command.startsWith("/attack_")) {
+      delayCountdown(4, () => {
+        const success = Math.random() > 0.3;
+        if (success) {
+          writeOutput("💣 Attack successful on target.");
+        } else {
+          writeOutput("❌ Attack failed. Use /bypass_firewall");
+        }
+      });
+    }
+    else if (command === "/bypass_firewall") {
+      delayCountdown(6, () => {
+        const success = Math.random() > 0.2;
+        writeOutput(success ? "✅ Firewall bypassed successfully." : "⚠️ Firewall bypass failed.");
+      });
+    }
+    else {
+      writeOutput("⚠️ Unknown command. Type /help");
+    }
+  }
+});
