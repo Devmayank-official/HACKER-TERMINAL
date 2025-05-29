@@ -1,54 +1,90 @@
 # 🧠 Hacker Terminal Project
 
-A green-glow terminal simulator with fake cyber-attacks, real-time animations, and simulated hacking commands — built with pure frontend tech.
+A cyberpunk-style hacker terminal simulation series with green-on-black UI, animated commands, and fake cyber operations. Built purely with HTML, CSS, and JavaScript — no backend, no libraries. 100% simulation. 100% terminal immersion.
 
 ---
 
-## 📁 Project Versions
+## 🔹 Hacker Terminal V1.0
 
-### 🔹 [V1.0](./v1.0/index.html)
+A minimalist terminal with basic hacking-style commands and glowing green UI.
 
-> Basic version with:
-- Scan devices & network
-- DDoS attack simulation
-- Password cracking
-- Firewall bypass
+### 💡 Features
+- 💻 Terminal-style interface with green-glow theme  
+- 🧠 Fake commands like:
+  - `/scan_devices`
+  - `/scan_network`
+  - `/trace -block --ip=xxx.xx.xxx`
+  - `/crack -hash --file=passwords.db`
+  - `/launch -ddos --target=URL`
+  - `/bypass_firewall`  
+- ⏳ Real-time countdown animations  
+- 🔐 Random password generator  
+- 🎯 Simulation randomness (success/fail)  
+- 🎨 Styled with pure CSS  
+- 📦 Self-contained and browser-based
 
----
+### 📁 File Structure v1.0/
+├── index.html
+├── style.css
+└── script.js
 
-### 🔹 [V1.5](./v1.5/index.html)
+### 🚀 How to Use
+- Open `v1.0/index.html` in your browser  
+- Type `/help` to explore commands  
+- Watch the animations and responses
 
-> Advanced version with:
-- Virus creation & injection
-- MAC spoofing
-- Quantum key generation
-- Backdoor + Decryption simulation
-- Better layout, animation, and responsiveness
+### 🛠 Tech Stack
+- HTML5  
+- CSS3 (green glow terminal style)  
+- JavaScript (vanilla only)
 
----
+### 🔥 Sample Commands
+/help  
+/scan_devices  
+/scan_network  
+/trace -block --ip=192.168.0.1  
+/launch -ddos --target=example.com  
+/crack -hash --file=passwords.db  
+/bypass_firewall
+🔹 Hacker Terminal V1.5
+An upgraded hacker terminal with advanced features and deeper simulation logic.
 
-## 🛠 Tech Stack
+💡 What’s New
+🦠 /create -virus and /inject -virusname
 
-- HTML + CSS + Vanilla JS  
-- No libraries, no backend
+🛡️ /spoof -mac to fake MAC addresses
 
----
+🔐 /generate -quantum_key & /decrypt
 
-## 🙌 Created by
+💣 /backdoor -inject --port=PORT
 
-**Mayank (Devmayank-official)**  
-📧 devmayank.inbox@gmail.com  
-🌼 Blessed by Radha Rani  
-🔥 More projects: Jarvis AI, Nova DApp
+🌐 /clone -site URL
 
----
+⚠️ /sudo overload-core to crash the system
 
-## ⚠️ Disclaimer
+✨ Responsive layout + glowing effects
 
-This project is 100% simulation.  
-It does not perform real hacking.  
-Use for fun, learning, and UI experience only.
+📁 File Structure v1.5/
+├── index.html  
+├── style.css  
+└── script.js  
 
----
+🚀 How to Use
+Open v1.5/index.html in your browser
 
-⭐ Star if you enjoyed this terminal fantasy!
+Type /help to view all advanced commands
+
+Experiment and simulate advanced attacks
+
+
+✨ Creator
+Mayank (Devmayank-official) — 16 y/o terminal simulation enthusiast
+🔮 Projects: Nova DApp, Jarvis AI, Frozen, and now Hacker Terminal
+📧 Email: devmayank.inbox@gmail.com
+🌼 Guided by Radha Rani's blessings
+
+⚠️ Disclaimer
+This project is a visual simulation for educational and entertainment purposes.
+It does not perform real hacking or access real networks. Use it responsibly.
+
+⭐ Drop a star if you like the terminal vibes. More versions coming soon...
