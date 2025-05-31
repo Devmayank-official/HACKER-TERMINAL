@@ -62,7 +62,7 @@ Try typing:
 Each command responds with random results, animations, or delays for full terminal-hacking immersion 🔥
 
 ✨ Creator
-Dhruv (Devmayank) — 16 y/o terminal simulation enthusiast
+Mayank — 16 y/o terminal simulation enthusiast
 🔮 Projects: Nova DApp, Jarvis AI, Frozen, and now Hacker Terminal
 📧 Email: devmayank.inbox@gmail.com
 🌼 Guided by Radha Rani's blessings
