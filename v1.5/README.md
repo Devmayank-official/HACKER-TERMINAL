@@ -56,7 +56,7 @@ CSS3 (Green neon terminal styling)
 JavaScript (All logic, no libraries)
 
 ✨ Creator
-Mayank (Devmayank-official)
+Dhruv (Devmayank)
 🧠 Dev behind Jarvis AI, Nova DApp, Frozen & Hacker Terminal
 📧 Email: devmayank.inbox@gmail.com
 🌼 Blessed by Radha Rani ✨
