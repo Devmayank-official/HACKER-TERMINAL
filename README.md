@@ -78,7 +78,7 @@ Experiment and simulate advanced attacks
 
 
 ✨ Creator
-Mayank (Devmayank-official) — 16 y/o terminal simulation enthusiast
+Mayank — 16 y/o terminal simulation enthusiast
 🔮 Projects: Nova DApp, Jarvis AI, Frozen, and now Hacker Terminal
 📧 Email: devmayank.inbox@gmail.com
 🌼 Guided by Radha Rani's blessings
